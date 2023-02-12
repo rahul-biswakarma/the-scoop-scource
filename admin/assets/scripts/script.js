@@ -10,7 +10,9 @@ $(".summernote").summernote({
 		["view", ["fullscreen", "codeview", "help"]],
 	],
 	inheritPlaceholder: true,
-	height: 300,
+	height: 200,
 });
 
-window.addEventListener("DOMContentLoaded", () => {});
+window.addEventListener("DOMContentLoaded", () => {
+	updatePagesOptionContainer();
+});

@@ -57,3 +57,39 @@
 #edit-news-button {
 	margin: 0;
 }
+
+#page-category-input {
+	width: 100%;
+	flex: 1 1 100%;
+}
+
+#extra-form-container {
+	width: 100%;
+}
+
+#breaking-news-container {
+	width: 100%;
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+.breaking-news-form-title {
+	width: 100%;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	text-align: center;
+	border-bottom: 1px solid black;
+	padding: 0.5rem;
+}
+
+.breaking-new-form {
+	display: flex;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	padding: 1rem;
+}

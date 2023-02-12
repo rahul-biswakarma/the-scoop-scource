@@ -1,7 +1,24 @@
 function submitNews(pageNo) {
-	if (newsPaper.length >= pageNo) {
-		newsPaper[pageNo] = news;
+	if (pageNo !== 0) {
+		let pageCategory = document.getElementById("category-input").value;
+		newsPaper[pageNo].info.category = pageCategory;
 	} else {
-		newsPaper.push(news);
+		let breakingHeadline = document.getElementById(
+			"breaking-headline-input"
+		).value;
+		let breakingImgUrl = document.getElementById("breaking-imgurl-input").value;
+		let breakingNewsContent = document.getElementById(
+			"breaking-news-content"
+		).value;
+
+		let breakingNews = {
+			headline: breakingHeadline,
+			imgUrl: breakingImgUrl,
+			content: breakingNewsContent,
+		};
+
+		newsPaper[0].breakingNews = breakingNews;
 	}
+	console.log(newsPaper);
+	localStorage.setItem("newsPaper", JSON.stringify(newsPaper));
 }
