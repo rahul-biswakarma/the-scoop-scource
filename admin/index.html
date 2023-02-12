@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./assets/styles/index.css">
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js"
+		integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+		rel="stylesheet">
+
+	<!-- Material Icon -->
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+	<title>Editor X | The Scoop Source</title>
+</head>
+
+<body>
+
+	<section class="login-container">
+		<header class="editor-header-container">
+			<div class="editor-header-title">The Scoop Source</div>
+			<div class="editor-header-info-container">
+				<span class="editor-header-info">Add / Edit / Remove News</span>
+			</div>
+		</header>
+		<button id="login-button">login</button>
+	</section>
+
+	<main class="main-container">
+		<section class="admin-main-left-container">
+			<h1>Pages</h1>
+			<div class="pages-container"></div>
+			<button id="add-pages-button" class="add-pages-button">
+				<span class="material-symbols-outlined">
+					add
+				</span>
+			</button>
+		</section>
+		<section class="admin-main-right-container">
+			<div class="main-info-container">
+				<span class="editor-header-info">Page</span>
+				<span class="editor-header-info">Editor X</span>
+			</div>
+			<div class="news-adition-form-container">
+				<form class="news-addition-form">
+					<div class="news-addition-form-input-container">
+						<label>Headline</label>
+						<input id="headline-input" name="headline" placeholder="Headline" />
+					</div>
+					<div class="news-addition-form-input-container">
+						<label>Image Url</label>
+						<input id="imgurl-input" name="image-url" placeholder="Image Url" />
+					</div>
+					<div class="news-addition-form-input-container">
+						<label>News Content</label>
+						<textarea class="summernote" name="news-content" id="news-content"
+							placeholder="News Content"></textarea>
+					</div>
+					<div class="news-addition-form-button-container">
+						<button id="add-news-button" class="add-news-button">Add News</button>
+					</div>
+				</form>
+				<div class="admin-left-container">
+					<div id="accordion-container" class="accordion-container"></div>
+					<div class="news-addition-form-button-container">
+						<button id="submit-news-button" class="add-news-button">Submit</button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<script src="./assets/scripts/newspaper-object.js"></script>
+	<script src="./assets/scripts/handle-login.js"></script>
+	<script src="./assets/scripts/summernote-lite.min.js"></script>
+	<script src="./assets/scripts/render-accordion.js"></script>
+	<script src="./assets/scripts/script.js"></script>
+	<script src="./assets/scripts/add-pages-button.js"></script>
+</body>
+
+</html>

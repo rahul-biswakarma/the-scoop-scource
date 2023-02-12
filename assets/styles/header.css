@@ -1,0 +1,40 @@
+.home-header-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.home-header-title {
+	font-family: "Poppins", sans-serif;
+	font-size: 4rem;
+	text-align: center;
+	width: 100%;
+	padding: 2rem 1rem;
+	font-weight: 700;
+	text-transform: capitalize;
+	line-height: 90%;
+}
+
+.home-header-info-container {
+	border: 1px solid #000;
+	border-left: none;
+	border-right: none;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem 1rem;
+	/* background: var(--blue); */
+}
+
+.home-header-info {
+	text-transform: uppercase;
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 600;
+	font-size: 0.8rem;
+	color: black;
+}
+
+.article-type-1-img {
+	width: 100%;
+	object-fit: cover;
+	aspect-ratio: 16/9;
+	
+}

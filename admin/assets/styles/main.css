@@ -1,0 +1,24 @@
+main {
+	display: none;
+	height: 100vh;
+	grid-template-columns: max(300px, 25%) auto;
+}
+
+.main-info-container {
+	border-bottom: 1px solid #000;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem 1rem;
+	position: sticky;
+	top: 0px;
+	background: #fff;
+	z-index: 10;
+}
+
+.admin-main-right-container {
+	overflow-y: scroll;
+}
+
+.news-adition-form-container {
+	padding: 3rem;
+}

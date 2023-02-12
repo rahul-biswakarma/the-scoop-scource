@@ -1,0 +1,41 @@
+@import url(./summernote-lite.min.css);
+@import url(./news-addition-form.css);
+@import url(./header.css);
+@import url(./accordion.css);
+@import url(./login-page.css);
+@import url(./main.css);
+@import url(./main-left-container.css);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+	width: 1em;
+}
+
+*::-webkit-scrollbar-track {
+	outline: 1px solid black;
+	padding: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #f1f1f1;
+	outline: 1px solid black;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: "Source Sans Pro", sans-serif;
+	overflow-y: scroll;
+	min-height: 100vh;
+	height: 100vh;
+	overflow: hidden;
+}
+
+#submit-news-button {
+	margin: 0;
+}

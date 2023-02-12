@@ -1,0 +1,28 @@
+.footer-container {
+	position: relative;
+	width: 100%;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	padding-top: 3rem;
+}
+
+.page-navigation-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--blue);
+	padding: 0.5rem 2rem;
+	cursor: pointer;
+	transition: all 100ms ease-out;
+	color: white;
+}
+
+.page-navigation-button:hover {
+	color: var(--blue);
+	background: white;
+}
