@@ -1,7 +1,6 @@
 function generatePageNavigators(currentPageNumber, totalPageNumber) {
 	return `
 	<footer class="footer-container">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 		<button onclick="flipPageBackward(${currentPageNumber})" class="page-navigation-button">
 			<span class="material-symbols-outlined">
 				arrow_back
@@ -15,13 +14,16 @@ function generatePageNavigators(currentPageNumber, totalPageNumber) {
 	</footer>
 	`;
 }
-
 function flipPageForward(pageNo) {
-	document.getElementById(`page-${pageNo}`).style.display = "block";
-	document.getElementById(`page-${pageNo - 1}`).style.display = "none";
+	if (pageNo <= newsPaper[newsPaper.length - 1].info.totalPagesCount - 1) {
+		document.getElementById(`page-${pageNo}`).style.display = "block";
+		document.getElementById(`page-${pageNo - 1}`).style.display = "none";
+	}
 }
 
 function flipPageBackward(pageNo) {
-	document.getElementById(`page-${pageNo}`).style.display = "block";
-	document.getElementById(`page-${pageNo + 1}`).style.display = "none";
+	if (pageNo - 2 >= 0) {
+		document.getElementById(`page-${pageNo - 1}`).style.display = "none";
+		document.getElementById(`page-${pageNo - 2}`).style.display = "block";
+	}
 }

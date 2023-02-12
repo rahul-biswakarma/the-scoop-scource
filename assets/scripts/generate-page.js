@@ -1,33 +1,46 @@
 function generatePage(pageObject) {
 	return `
-	<section class="page">
+	<section id="page-${pageObject.info.currentPage - 1}" class="page">
 		${
-			pageObject.info.currentPageNo === 1
+			pageObject.info.currentPage === 1
 				? generateHomeHeader(
-						pageObject.date,
-						pageObject.price,
-						pageObject.totalNoOfPages
+						pageObject.info.date,
+						pageObject.info.price,
+						newsPaper.length
 				  )
-				: generateHeader("")
+				: generateHeader(
+						pageObject.info.category,
+						pageObject.info.date,
+						pageObject.info.currentPage
+				  )
 		}
 
-		${newsLayout1(
-			pageObject.breakingNews.headline,
-			pageObject.breakingNews.content,
-			pageObject.breakingNews.imgUrl
-		)}
-		
-	${pageObject.news.reduce((acc, singleNews, index) => {
-		acc += newsLayout2(
-			singleNews.headline,
-			singleNews.content,
-			singleNews.imgUrl
-		);
-		return acc;
-	}, "")}
+		<div class="page-content-container">
+			${
+				pageObject.info.currentPage === 1 &&
+				pageObject.breakingNews.headline !== "" &&
+				pageObject.breakingNews.headline !== undefined
+					? newsLayout1(
+							pageObject.breakingNews.headline,
+							pageObject.breakingNews.content,
+							pageObject.breakingNews.imgUrl
+					  )
+					: ""
+			}
+			<main>
+				${pageObject.news.reduce((acc, singleNews, index) => {
+					acc += newsLayout2(
+						singleNews.headline,
+						singleNews.content,
+						singleNews.imgUrl
+					);
+					return acc;
+				}, "")}
+			</main>
+		</div>
 		
 	${generatePageNavigators(
-		pageObject.info.currentPageNo,
+		pageObject.info.currentPage,
 		pageObject.info.totalNoOfPages
 	)}
 		

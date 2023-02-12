@@ -12,12 +12,12 @@ function generateHomeHeader(date, price, totalNoOfPages) {
 
 function generateHeader(category, date, pageNo) {
 	return `
-	<header class="header-container">
-		<div class="header-category">${category}/div>
-		<div class="header-center-dotted-line"></div>
-		<div class="header-info-container">
-			<span class="header-info">${date}</span>
-			<span class="header-info">The Scoop Source <span class="header-info-pageNo">${pageNo}</span></span>
+	<header class="home-header-container">
+		<div class="home-header-title">${category}</div>
+		<div class="home-header-info-container">
+			<span class="home-header-info">${date}</span>
+			<span class="home-header-info">The Scoop Source</span>
+			<span class="home-header-info">Page ${pageNo}</span>
 		</div>
 	</header>`;
 }

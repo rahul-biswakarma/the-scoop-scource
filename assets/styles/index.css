@@ -3,11 +3,11 @@
 @import url(./header.css);
 @import url(./footer.css);
 @import url(./article.css);
+@import url(./main.css);
 
 body {
 	min-height: 100vh;
 }
-
 *::-webkit-scrollbar {
 	width: 1em;
 }
