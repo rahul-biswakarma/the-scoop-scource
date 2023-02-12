@@ -47,8 +47,8 @@
 		</section>
 		<section class="admin-main-right-container">
 			<div class="main-info-container">
-				<span class="editor-header-info">Page</span>
-				<span class="editor-header-info">Editor X</span>
+				<span id="editor-header-page-no" class="editor-header-info">Page</span>
+				<span class="editor-header-info">The Scoop Scource \ Editor X</span>
 			</div>
 			<div class="news-adition-form-container">
 				<form class="news-addition-form">
@@ -65,26 +65,28 @@
 						<textarea class="summernote" name="news-content" id="news-content"
 							placeholder="News Content"></textarea>
 					</div>
-					<div class="news-addition-form-button-container">
-						<button id="add-news-button" class="add-news-button">Add News</button>
+					<div id="add-news-button-container" class="news-addition-form-button-container">
+
 					</div>
 				</form>
 				<div class="admin-left-container">
 					<div id="accordion-container" class="accordion-container"></div>
-					<div class="news-addition-form-button-container">
-						<button id="submit-news-button" class="add-news-button">Submit</button>
-					</div>
+					<div id="news-submit-button" class="news-addition-form-button-container"></div>
 				</div>
 			</div>
 		</section>
 	</main>
 
 	<script src="./assets/scripts/newspaper-object.js"></script>
+	<script src="./assets/scripts/add-pages-button.js"></script>
+	<script src="./assets/scripts/add-news.js"></script>
 	<script src="./assets/scripts/handle-login.js"></script>
+	<script src="./assets/scripts/reveal-page-form.js"></script>
 	<script src="./assets/scripts/summernote-lite.min.js"></script>
 	<script src="./assets/scripts/render-accordion.js"></script>
+	<script src="./assets/scripts/submit-news.js"></script>
+	<script src="./assets/scripts/edit-news.js"></script>
 	<script src="./assets/scripts/script.js"></script>
-	<script src="./assets/scripts/add-pages-button.js"></script>
 </body>
 
 </html>

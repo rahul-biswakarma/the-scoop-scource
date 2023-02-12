@@ -2,12 +2,12 @@
 	width: 100%;
 	flex: 1 1 max(500px, calc(100% / 3));
 	border: 1px solid #c2c2c2;
-	min-height: 500px;
 	padding: 1rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	gap: 1rem;
+	margin-top: 2rem;
 }
 
 .accordion-container {
@@ -36,17 +36,20 @@
 	justify-content: space-between;
 	align-items: center;
 	text-transform: capitalize;
+	font-family: "Source Sans Pro", sans-serif;
 }
 
 .accordion-body {
 	padding: 0rem;
 	height: 0px;
 	overflow: hidden;
+	font-family: "Source Sans Pro", sans-serif;
 }
 
 .accordion.active .accordion-body {
 	padding: 1.5rem;
 	height: 100%;
+	font-family: "Source Sans Pro", sans-serif;
 }
 
 .accordion-arrow-icon {

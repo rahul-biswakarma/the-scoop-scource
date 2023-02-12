@@ -30,8 +30,10 @@ function updatePagesOptionContainer() {
 
 	pageContainer.innerHTML = "";
 
-	for (let page = 1; page <= totalPages; page++) {
-		pageContainer.innerHTML += `<button class="page-button" onclick="revelPageForm(${page})">Page ${page}</button>`;
+	for (let page = 0; page < totalPages; page++) {
+		pageContainer.innerHTML += `<button class="page-button" onclick="revealPageForm(${page})">Page ${
+			page + 1
+		}</button>`;
 	}
 }
 

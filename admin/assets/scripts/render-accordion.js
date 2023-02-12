@@ -1,9 +1,15 @@
-function renderAccordion(news, targetElementId) {
+function renderAccordion(pageIndex, targetElementId) {
 	const ELEMENT = document.querySelector(`#${targetElementId}`);
 	ELEMENT.innerHTML = "";
 
-	ELEMENT.innerHTML += news.reduce((acc, singleNews, index) => {
-		acc += `
+	if (
+		newsPaper[pageIndex] &&
+		newsPaper[pageIndex].news &&
+		newsPaper[pageIndex].news.length > 0
+	)
+		ELEMENT.innerHTML += newsPaper[pageIndex].news.reduce(
+			(acc, singleNews, index) => {
+				acc += `
 		<section  class="accordion">
 			<header onclick="toggleAccordion(${index})"  class="accordion-header">
 				${singleNews.headline}
@@ -15,29 +21,31 @@ function renderAccordion(news, targetElementId) {
 				<form class="news-addition-form">
 					<div class="news-addition-form-input-container">
 						<label>Headline</label>
-						<input id="headline-input" name="headline" placeholder="Headline" value="${singleNews.headline}" />
+						<input id="headline-input-${index}" name="headline" placeholder="Headline" value="${singleNews.headline}" />
 					</div>
 					<div class="news-addition-form-input-container">
 						<label>Image Url</label>
-						<input id="imgurl-input" name="image-url" placeholder="Image Url" value="${singleNews.imgUrl}" />
+						<input id="imgurl-input-${index}" name="image-url" placeholder="Image Url" value="${singleNews.imgUrl}" />
 					</div>
 					<div class="news-addition-form-input-container">
 						<label>News Content</label>
-						<textarea class="accordion-summernote-${index}" name="news-content" id="news-content" value="${singleNews.content}"
+						<textarea class="accordion-summernote-${index}" name="news-content" id="news-content-${index}" value="${singleNews.content}"
 							placeholder="News Content"></textarea>
 					</div>
 					<div class="news-addition-form-button-container">
-						<button id="edit-news-button" class="add-news-button">Edit News</button>
+						<button onclick="editNews(event,${pageIndex},${index})" id="edit-news-button" class="add-news-button">Edit News</button>
 					</div>
 				</form>
 			</div>
 		</section>
 		`;
-		setTimeout(() => {
-			initiateAccordionSummerNote(index, singleNews.content);
-		}, 500);
-		return acc;
-	}, "");
+				setTimeout(() => {
+					initiateAccordionSummerNote(index, singleNews.content);
+				}, 500);
+				return acc;
+			},
+			""
+		);
 }
 
 function toggleAccordion(accordionIndex) {

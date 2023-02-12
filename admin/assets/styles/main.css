@@ -17,6 +17,7 @@ main {
 
 .admin-main-right-container {
 	overflow-y: scroll;
+	display: none;
 }
 
 .news-adition-form-container {
