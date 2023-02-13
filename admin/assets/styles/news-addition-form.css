@@ -92,6 +92,7 @@
 	text-align: center;
 	border-bottom: 1px solid black;
 	padding: 0.5rem;
+	background: #eaeaea;
 }
 
 .breaking-new-form {
@@ -105,4 +106,12 @@
 .note-editable {
 	font-size: 1rem;
 	font-family: "Source Sans Pro", sans-serif;
+}
+
+.required-label::after {
+	padding-left: 0.3rem;
+	content: "*";
+	color: red;
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 1rem;
 }

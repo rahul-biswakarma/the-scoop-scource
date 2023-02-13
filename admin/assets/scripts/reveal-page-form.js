@@ -2,11 +2,18 @@ function revealPageForm(pageIndex) {
 	// Updating localNews object
 	localNews = newsPaper[pageIndex].news;
 
+	// Highlighting Page Button
+	let allPageButton = document.querySelectorAll(".page-button");
+	Array.from(allPageButton).map((pageButton, index) => {
+		if (index === pageIndex) pageButton.classList.add("active");
+		else pageButton.classList.remove("active");
+	});
+
 	// Submit Buttons
 	let formSubmitButtonContainer = document.querySelector("#news-submit-button");
 	formSubmitButtonContainer.innerHTML = `
-	<button onclick="submitNews(${pageIndex})" id="submit-news-button" class="add-news-button">Submit</button>
 	<a href="http://127.0.0.1:5500/" target="_blank" class="add-news-button">Preview</a>
+	<button onclick="submitNews(${pageIndex})" id="submit-news-button" class="add-news-button">Submit</button>
 	`;
 
 	document.getElementById("editor-header-page-no").innerText = `Page ${
@@ -37,8 +44,8 @@ function revealPageForm(pageIndex) {
 			<h1 class="breaking-news-form-title">Breaking News</h1>
 			<div class="breaking-new-form">
 				<div class="news-addition-form-input-container">
-					<label>Headline</label>
-					<input id="breaking-headline-input" name="breaking-headline" placeholder="Headline" ${
+					<label class="required-label">Headline</label>
+					<input id="breaking-headline-input" name="breaking-headline" required placeholder="Headline" ${
 						newsPaper[0].breakingNews.headline !== "" &&
 						newsPaper[0].breakingNews.headline !== undefined
 							? `value="${newsPaper[0].breakingNews.headline}"`
@@ -46,8 +53,8 @@ function revealPageForm(pageIndex) {
 					}  />
 				</div>
 				<div class="news-addition-form-input-container">
-					<label>Image Url</label>
-					<input id="breaking-imgurl-input" name="breaking-image-url" placeholder="Image Url" ${
+					<label class="required-label">Image Url</label>
+					<input id="breaking-imgurl-input" name="breaking-image-url" required placeholder="Image Url" ${
 						newsPaper[0].breakingNews.imgUrl !== "" &&
 						newsPaper[0].breakingNews.imgUrl !== undefined
 							? `value="${newsPaper[0].breakingNews.imgUrl}"`
@@ -55,8 +62,8 @@ function revealPageForm(pageIndex) {
 					} />
 				</div>
 				<div class="news-addition-form-input-container">
-					<label>News Content</label>
-					<textarea class="breaking-news-summernote" name="breaking-news-content" id="breaking-news-content"
+					<label class="required-label">News Content</label>
+					<textarea class="breaking-news-summernote" name="breaking-news-content" id="breaking-news-content" required
 						placeholder="News Content"></textarea>
 				</div>
 			</div>

@@ -34,6 +34,12 @@
 	font-family: "Source Sans Pro", sans-serif;
 }
 
+.page-button.active {
+	background: blue;
+	border-color: blue;
+	color: white;
+}
+
 .admin-main-left-container .add-pages-button:hover,
 .page-button:hover {
 	background: blue;
