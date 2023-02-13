@@ -8,10 +8,12 @@ function addNews(e, pageIndex) {
 		content: content,
 		imgUrl: imgUrl,
 	};
-	localNews.push(newsArticle);
-	renderAccordion(pageIndex, localNews, "accordion-container");
+	if (validateNews(headline, imgUrl, content) === true) {
+		localNews.push(newsArticle);
+		renderAccordion(pageIndex, localNews, "accordion-container");
 
-	document.getElementById("headline-input").value = "";
-	document.getElementById("imgurl-input").value = "";
-	$(`.summernote`).summernote("code", "");
+		document.getElementById("headline-input").value = "";
+		document.getElementById("imgurl-input").value = "";
+		$(`.summernote`).summernote("code", "");
+	}
 }

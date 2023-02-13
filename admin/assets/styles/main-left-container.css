@@ -28,10 +28,17 @@
 .admin-main-left-container .add-pages-button,
 .page-button {
 	border: 1px solid black;
-	padding: 0.5rem;
 	transition: 200ms;
 	font-size: 14px;
 	font-family: "Source Sans Pro", sans-serif;
+}
+
+.page-button {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	align-items: center;
+	padding: 0.5rem 1rem;
 }
 
 .page-button.active {

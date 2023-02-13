@@ -1,0 +1,46 @@
+#toast-notification-container {
+	position: fixed;
+	width: 50vh;
+	z-index: 1000;
+	height: 100vh;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	padding-bottom: 1rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	align-items: end;
+	gap: 1rem;
+
+	pointer-events: none;
+}
+
+.toast-message {
+	background: var(--blue);
+	width: 300px;
+	padding: 1rem;
+	color: white;
+	font-family: "Source Sans Pro", sans-serif;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	animation: slide 2900ms ease-in-out;
+	transform: translateX(100%);
+}
+
+@keyframes slide {
+	0% {
+		transform: translateX(100%);
+	}
+	20% {
+		transform: translateX(0%);
+	}
+	80% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}

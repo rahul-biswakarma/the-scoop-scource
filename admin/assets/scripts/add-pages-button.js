@@ -31,9 +31,11 @@ function updatePagesOptionContainer() {
 	pageContainer.innerHTML = "";
 
 	for (let page = 0; page < totalPages; page++) {
-		pageContainer.innerHTML += `<button class="page-button" onclick="revealPageForm(${page})">Page ${
+		pageContainer.innerHTML += `<button class="page-button" onclick="revealPageForm(${page})"><span>Page ${
 			page + 1
-		}</button>`;
+		}</span> <span onclick="deletePage(event, ${page})" class="material-symbols-outlined accordion-delete-icon">
+		delete
+	</span></button>`;
 	}
 }
 
