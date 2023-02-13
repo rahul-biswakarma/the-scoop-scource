@@ -3,9 +3,9 @@ function generateHomeHeader(date, price, totalNoOfPages) {
 	<header class="home-header-container">
 		<div class="home-header-title">The Scoop Source</div>
 		<div class="home-header-info-container">
-			<span class="home-header-info">Pages ${totalNoOfPages}</span>
+			<span class="home-header-info">Total Pages ${totalNoOfPages}</span>
 			<span class="home-header-info">${date}</span>
-			<span class="home-header-info">₹ ${price}</span>
+			<span class="home-header-info">₹ 34.43</span>
 		</div>
 	</header>`;
 }

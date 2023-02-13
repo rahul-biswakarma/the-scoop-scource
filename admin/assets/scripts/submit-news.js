@@ -1,7 +1,7 @@
-function submitNews(pageNo) {
-	if (pageNo !== 0) {
+function submitNews(pageIndex) {
+	if (pageIndex !== 0) {
 		let pageCategory = document.getElementById("category-input").value;
-		newsPaper[pageNo].info.category = pageCategory;
+		newsPaper[pageIndex].info.category = pageCategory;
 	} else {
 		let breakingHeadline = document.getElementById(
 			"breaking-headline-input"
@@ -19,6 +19,6 @@ function submitNews(pageNo) {
 
 		newsPaper[0].breakingNews = breakingNews;
 	}
-	console.log(newsPaper);
+	newsPaper[pageIndex].news = localNews;
 	localStorage.setItem("newsPaper", JSON.stringify(newsPaper));
 }

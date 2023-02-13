@@ -1,21 +1,22 @@
-function renderAccordion(pageIndex, targetElementId) {
+function renderAccordion(pageIndex, newsObj, targetElementId) {
 	const ELEMENT = document.querySelector(`#${targetElementId}`);
 	ELEMENT.innerHTML = "";
 
-	if (
-		newsPaper[pageIndex] &&
-		newsPaper[pageIndex].news &&
-		newsPaper[pageIndex].news.length > 0
-	)
-		ELEMENT.innerHTML += newsPaper[pageIndex].news.reduce(
-			(acc, singleNews, index) => {
-				acc += `
+	if (newsObj && newsObj.length > 0) {
+		document.querySelector(".admin-left-container").style.display = "flex";
+		ELEMENT.innerHTML += newsObj.reduce((acc, singleNews, index) => {
+			acc += `
 		<section  class="accordion">
 			<header onclick="toggleAccordion(${index})"  class="accordion-header">
 				${singleNews.headline}
-				<span class="material-symbols-outlined accordion-arrow-icon">
-					expand_more
-				</span>
+				<div class="accordion-icon-container">
+					<span onclick="deleteNews(event, ${index}, ${pageIndex})" class="material-symbols-outlined accordion-delete-icon">
+						delete
+					</span>
+					<span class="material-symbols-outlined accordion-arrow-icon">
+						expand_more
+					</span>
+				</div>
 			</header>
 			<div class="accordion-body">
 				<form class="news-addition-form">
@@ -39,13 +40,14 @@ function renderAccordion(pageIndex, targetElementId) {
 			</div>
 		</section>
 		`;
-				setTimeout(() => {
-					initiateAccordionSummerNote(index, singleNews.content);
-				}, 500);
-				return acc;
-			},
-			""
-		);
+			setTimeout(() => {
+				initiateAccordionSummerNote(index, singleNews.content);
+			}, 500);
+			return acc;
+		}, "");
+	} else {
+		document.querySelector(".admin-left-container").style.display = "none";
+	}
 }
 
 function toggleAccordion(accordionIndex) {

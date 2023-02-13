@@ -8,6 +8,6 @@ function editNews(e, pageIndex, newsIndex) {
 		content: content,
 		imgUrl: imgUrl,
 	};
-	newsPaper[pageIndex].news[newsIndex] = newsArticle;
-	renderAccordion(pageIndex, "accordion-container");
+	newsLocal[newsIndex] = newsArticle;
+	renderAccordion(pageIndex, localNews, "accordion-container");
 }

@@ -1,6 +1,6 @@
 var newsPaper = [];
 
-var news = [];
+var pageNews = [];
 
 window.addEventListener("DOMContentLoaded", () => {
 	if (localStorage.getItem("newsPaper"))

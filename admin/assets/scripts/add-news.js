@@ -8,9 +8,8 @@ function addNews(e, pageIndex) {
 		content: content,
 		imgUrl: imgUrl,
 	};
-	console.log(pageIndex, newsPaper);
-	newsPaper[pageIndex].news.push(newsArticle);
-	renderAccordion(pageIndex, "accordion-container");
+	localNews.push(newsArticle);
+	renderAccordion(pageIndex, localNews, "accordion-container");
 
 	document.getElementById("headline-input").value = "";
 	document.getElementById("imgurl-input").value = "";

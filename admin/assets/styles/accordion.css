@@ -3,7 +3,6 @@
 	flex: 1 1 max(500px, calc(100% / 3));
 	border: 1px solid #c2c2c2;
 	padding: 1rem;
-	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	gap: 1rem;
@@ -63,4 +62,18 @@
 
 .accordion.active .accordion-arrow-icon {
 	transform: rotate(0deg);
+}
+
+.accordion-icon-container {
+	display: flex;
+	gap: 1rem;
+}
+
+.accordion-delete-icon {
+	transition: 200ms;
+	cursor: pointer;
+}
+
+.accordion-delete-icon:hover {
+	color: red;
 }

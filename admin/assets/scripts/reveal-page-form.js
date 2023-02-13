@@ -1,6 +1,13 @@
 function revealPageForm(pageIndex) {
+	// Updating localNews object
+	localNews = newsPaper[pageIndex].news;
+
+	// Submit Buttons
 	let formSubmitButtonContainer = document.querySelector("#news-submit-button");
-	formSubmitButtonContainer.innerHTML = `<button onclick="submitNews(${pageIndex})" id="submit-news-button" class="add-news-button">Submit</button>`;
+	formSubmitButtonContainer.innerHTML = `
+	<button onclick="submitNews(${pageIndex})" id="submit-news-button" class="add-news-button">Submit</button>
+	<a href="http://127.0.0.1:5500/" target="_blank" class="add-news-button">Preview</a>
+	`;
 
 	document.getElementById("editor-header-page-no").innerText = `Page ${
 		pageIndex + 1
@@ -83,5 +90,5 @@ function revealPageForm(pageIndex) {
 	}
 
 	if (newsPaper[pageIndex] && newsPaper[pageIndex].news)
-		renderAccordion(pageIndex, "accordion-container");
+		renderAccordion(pageIndex, localNews, "accordion-container");
 }
