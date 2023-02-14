@@ -1,12 +1,12 @@
-@import url(./variables.css);
-@import url(./summernote-lite.min.css);
-@import url(./news-addition-form.css);
-@import url(./header.css);
-@import url(./accordion.css);
-@import url(./login-page.css);
-@import url(./main.css);
-@import url(./main-left-container.css);
-@import url(./toast.css);
+@import url(../admin/assets/variables.css);
+@import url(../admin/assets/summernote-lite.min.css);
+@import url(../admin/assets/news-addition-form.css);
+@import url(../admin/assets/header.css);
+@import url(../admin/assets/accordion.css);
+@import url(../admin/assets/login-page.css);
+@import url(../admin/assets/main.css);
+@import url(../admin/assets/main-left-container.css);
+@import url(../admin/assets/toast.css);
 
 * {
 	margin: 0;
