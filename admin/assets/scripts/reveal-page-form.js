@@ -30,7 +30,7 @@ function revealPageForm(pageIndex) {
 	if (pageIndex !== 0)
 		document.getElementById("extra-form-container").innerHTML = `
 	<div id="page-category-input" class="news-addition-form-input-container">
-		<label>Page Category</label>
+		<label class="required-label">Page Category</label>
 		<input id="category-input" name="category" placeholder="Page Category" ${
 			newsPaper[pageIndex].info.category !== "" &&
 			newsPaper[pageIndex].info.category !== undefined

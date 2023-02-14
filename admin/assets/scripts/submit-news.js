@@ -1,6 +1,7 @@
 function submitNews(pageIndex) {
 	if (pageIndex !== 0) {
 		let pageCategory = document.getElementById("category-input").value;
+		if (validatePageCategory) return;
 		newsPaper[pageIndex].info.category = pageCategory;
 	} else {
 		let breakingHeadline = document.getElementById(

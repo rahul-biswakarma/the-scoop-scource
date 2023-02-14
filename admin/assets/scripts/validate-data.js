@@ -20,6 +20,13 @@ function validateBreakingNewsInput(headline, imgUrl, content) {
 	return true;
 }
 
+function validatePageCategory(category) {
+	if (category === "" || category === undefined || category === null) {
+		createToast("News page Category required");
+		return false;
+	}
+}
+
 function validateNews(headline, imgUrl, content) {
 	const urlPattern = /(https?:\/\/.*\.(?:png|jpg))/i;
 	if (headline === "" || headline === undefined || headline === null) {
