@@ -8,13 +8,16 @@
 body {
 	min-height: 100vh;
 }
+
 *::-webkit-scrollbar {
-	width: 1em;
+	width: 0px;
+	display: none;
 }
 
 *::-webkit-scrollbar-track {
 	outline: 1px solid black;
 	padding: 5px;
+	display: none;
 }
 
 *::-webkit-scrollbar-thumb {
