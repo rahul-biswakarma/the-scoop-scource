@@ -12,7 +12,7 @@ function revealPageForm(pageIndex) {
 	// Submit Buttons
 	let formSubmitButtonContainer = document.querySelector("#news-submit-button");
 	formSubmitButtonContainer.innerHTML = `
-	<a href="/" target="_blank" class="add-news-button">Preview</a>
+	<a onclick="updatePreviewPageNo(${pageIndex})" href="/" target="_blank" class="add-news-button">View Page</a>
 	<button onclick="submitNews(${pageIndex})" id="submit-news-button" class="add-news-button">Submit</button>
 	`;
 
@@ -98,4 +98,8 @@ function revealPageForm(pageIndex) {
 
 	if (newsPaper[pageIndex] && newsPaper[pageIndex].news)
 		renderAccordion(pageIndex, localNews, "accordion-container");
+}
+
+function updatePreviewPageNo(pageNo) {
+	localStorage.setItem("previewPageNo", pageNo);
 }
