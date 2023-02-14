@@ -12,7 +12,7 @@ function revealPageForm(pageIndex) {
 	// Submit Buttons
 	let formSubmitButtonContainer = document.querySelector("#news-submit-button");
 	formSubmitButtonContainer.innerHTML = `
-	<a href="http://127.0.0.1:5500/" target="_blank" class="add-news-button">Preview</a>
+	<a href="/" target="_blank" class="add-news-button">Preview</a>
 	<button onclick="submitNews(${pageIndex})" id="submit-news-button" class="add-news-button">Submit</button>
 	`;
 
