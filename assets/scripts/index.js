@@ -8,11 +8,13 @@ window.addEventListener("DOMContentLoaded", () => {
 	if (
 		localStorage.getItem("previewPageNo") &&
 		localStorage.getItem("previewPageNo") !== null &&
-		localStorage.getItem("previewPageNo") !== undefined
+		localStorage.getItem("previewPageNo") !== undefined &&
+		localStorage.getItem("previewPageNo") != 0
 	) {
 		document.getElementById(
 			`page-${localStorage.getItem("previewPageNo")}`
 		).style.display = "block";
 		document.getElementById(`page-0`).style.display = "none";
+		localStorage.setItem("previewPageNo", 0);
 	}
 });
