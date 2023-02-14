@@ -1,16 +1,33 @@
 function generatePageNavigators(currentPageNumber, totalPageNumber) {
+	totalPageNumber = newsPaper.length;
 	return `
 	<footer class="footer-container">
-		<button onclick="flipPageBackward(${currentPageNumber})" class="page-navigation-button">
-			<span class="material-symbols-outlined">
-				arrow_back
-			</span>
-		</button>
-		<button onclick="flipPageForward(${currentPageNumber})" class="page-navigation-button">
-			<span class="material-symbols-outlined">
-				arrow_forward
-			</span>
-		</button>
+		${
+			currentPageNumber !== totalPageNumber
+				? `<button onclick="flipPageForward(${currentPageNumber})" class="page-navigation-button">
+						<span class="material-symbols-outlined">
+							arrow_forward
+						</span>
+					</button>`
+				: `<button class="page-navigation-button disabled">
+						<span class="material-symbols-outlined">
+							arrow_forward
+						</span>
+					</button>`
+		}
+		${
+			currentPageNumber !== 1
+				? `<button onclick="flipPageBackward(${currentPageNumber})" class="page-navigation-button">
+						<span class="material-symbols-outlined">
+							arrow_back
+						</span>
+					</button>`
+				: `<button class="page-navigation-button disabled">
+						<span class="material-symbols-outlined">
+							arrow_back
+						</span>
+					</button>`
+		}
 	</footer>
 	`;
 }

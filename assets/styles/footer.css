@@ -19,10 +19,22 @@
 	cursor: pointer;
 	transition: all 100ms ease-out;
 	color: black;
+	border: 1px solid black;
 }
 
 .page-navigation-button:hover {
 	color: var(--blue);
 	background: var(--blue);
 	color: white;
+}
+
+.page-navigation-button.disabled {
+	color: #7c7c7c;
+	border: 1px solid #7c7c7c;
+}
+
+.page-navigation-button.disabled:hover {
+	color: #7c7c7c;
+	background: #f0f0f0;
+	color: #7c7c7c;
 }
