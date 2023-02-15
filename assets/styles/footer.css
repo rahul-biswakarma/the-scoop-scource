@@ -1,5 +1,6 @@
 .footer-container {
 	position: fixed;
+	padding: 1rem;
 	width: 100vw;
 	height: 100vh;
 	bottom: 0;
@@ -11,32 +12,26 @@
 }
 
 .page-navigation-button {
-	width: 200px;
-	height: 200px;
+	width: 70px;
+	height: 70px;
 	display: flex;
 	align-items: center;
-	padding: 50px;
+	justify-content: center;
+	padding: 10px;
 	cursor: pointer;
 	transition: all 100ms ease-out;
 	color: white;
 	border: none;
 	border-radius: 50%;
-	background: rgba(0, 0, 0, 0.05);
-}
-
-.page-navigation-button:nth-child(1) {
-	transform: translateX(-50%);
-	justify-content: flex-end;
-}
-
-.page-navigation-button:nth-child(2) {
-	transform: translateX(50%);
+	background: rgba(0, 0, 0, 1);
+	opacity: 0.1;
+	backdrop-filter: blur(100px);
 }
 
 .page-navigation-button:hover {
-	background: var(--blue);
+	background: black;
 	color: white;
-	opacity: 1;
+	opacity: 0.7;
 }
 
 .page-navigation-button.disabled {
@@ -44,6 +39,7 @@
 	border: none;
 	cursor: default;
 	background: transparent;
+	backdrop-filter: blur(0px);
 }
 
 .page-navigation-button.disabled:hover {

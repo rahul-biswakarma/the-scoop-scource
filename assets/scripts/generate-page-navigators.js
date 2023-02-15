@@ -7,12 +7,12 @@ function generatePageNavigators(currentPageNumber, totalPageNumber) {
 			currentPageNumber !== 1
 				? `<button onclick="flipPageBackward(${currentPageNumber})" class="page-navigation-button">
 						<span class="material-symbols-outlined">
-							arrow_back
+							chevron_left
 						</span>
 					</button>`
 				: `<button class="page-navigation-button disabled">
 						<span class="material-symbols-outlined">
-							arrow_back
+							chevron_left
 						</span>
 					</button>`
 		}
@@ -20,12 +20,12 @@ function generatePageNavigators(currentPageNumber, totalPageNumber) {
 			currentPageNumber !== totalPageNumber
 				? `<button onclick="flipPageForward(${currentPageNumber})" class="page-navigation-button">
 						<span class="material-symbols-outlined">
-							arrow_forward
+							chevron_right
 						</span>
 					</button>`
 				: `<button class="page-navigation-button disabled">
 						<span class="material-symbols-outlined">
-							arrow_forward
+							chevron_right
 						</span>
 					</button>`
 		}

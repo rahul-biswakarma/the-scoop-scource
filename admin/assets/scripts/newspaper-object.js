@@ -34,12 +34,19 @@ let dummyNewsPaper = [
 			{
 				headline: "Id velit ut tortor pretium viverra suspendisse potenti.",
 				content:
-					"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id velit ut tortor pretium viverra suspendisse potenti. Cras pulvinar mattis nunc sed blandit. Orci dapibus ultrices in iaculis nunc sed augue lacus viverra. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Vulputate eu scelerisque felis imperdiet proin fermentum. Pretium fusce id velit ut. Pharetra massa massa ultricies mi. Ipsum nunc aliquet bibendum enim. Aliquam purus sit amet luctus venenatis lectus. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Enim praesent elementum facilisis leo. Tincidunt id aliquet risus feugiat in ante metus dictum at. Enim ut sem viverra aliquet eget sit amet tellus. Orci a scelerisque purus semper eget duis at tellus. Massa tincidunt dui ut ornare lectus sit. Volutpat sed cras ornare arcu. Enim diam vulputate ut pharetra.<br></p>",
+					"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id velit ut tortor pretium viverra suspendisse potenti. Cras pulvinar mattis nunc sed blandit. Orci dapibus ultrices in iaculis nunc sed augue lacus viverra. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Vulputate eu scelerisque felis imperdiet proin fermentum. Pretium fusce id velit ut. Pharetra massa massa ultricies mi. Ipsum nunc aliquet bibendum enim. Aliquam purus sit amet luctus venenatis lectus. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Enim praesent elementum facilisis leo. Tincidunt id aliquet risus feugiat in ante metus dictum at. Enim ut sem viverra aliquet eget sit amet tellus. Orci a scelerisque purus semper eget duis at tellus. Massa tincidunt dui ut ornare lectus sit. Volutpat sed cras ornare arcu. Enim diam vulputate ut pharetra.<br></p> <img src='https://ia902204.us.archive.org/27/items/img-world-ticket-offers/yvA5SpUH-IMG-Worlds-1200x800.jpg'><p>Congue eu consequat ac felis donec et odio pellentesque diam. Fermentum dui faucibus in ornare. Blandit aliquam etiam erat velit scelerisque in. Cursus vitae congue mauris rhoncus aenean. Malesuada bibendum arcu vitae elementum. Blandit cursus risus at ultrices mi tempus imperdiet nulla malesuada. Ac turpis egestas sed tempus urna et pharetra. Sed elementum tempus egestas sed sed risus pretium quam. Lectus proin nibh nisl condimentum. Habitasse platea dictumst quisque sagittis purus sit amet volutpat. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit. Condimentum mattis pellentesque id nibh tortor id aliquet lectus. Sit amet volutpat consequat mauris nunc congue.</p>",
 				imgUrl: "",
 			},
 			{
-				headline: "",
-				content: "",
+				headline: "Excepteur sint occaecat cupidatat",
+				content:
+					"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+				imgUrl: "",
+			},
+			{
+				headline: "Nisl nunc mi ipsum faucibus vitae aliquet",
+				content:
+					"<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue interdum velit euismod in pellentesque massa placerat. Sit amet porttitor eget dolor morbi non arcu risus quis. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet. Vel turpis nunc eget lorem. Dignissim convallis aenean et tortor. Sed lectus vestibulum mattis ullamcorper velit sed ullamcorper. Condimentum lacinia quis vel eros. Odio facilisis mauris sit amet. Pulvinar pellentesque habitant morbi tristique senectus et netus. Eu consequat ac felis donec et. Tincidunt vitae semper quis lectus nulla at. Ultricies tristique nulla aliquet enim tortor at auctor urna. Diam in arcu cursus euismod quis viverra nibh cras. Mattis enim ut tellus elementum sagittis vitae et. Iaculis urna id volutpat lacus laoreet. Tellus elementum sagittis vitae et. Massa tempor nec feugiat nisl pretium fusce. Nisl tincidunt eget nullam non.</p>",
 				imgUrl: "",
 			},
 		],
